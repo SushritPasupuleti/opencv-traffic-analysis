@@ -15,10 +15,12 @@ IMAGE_DIR = "images"
 IMAGE_FILENAME_FORMAT = IMAGE_DIR + "/frame_%04d.png"
 
 # Support either video file or individual frames
-CAPTURE_FROM_VIDEO = False
+CAPTURE_FROM_VIDEO = True
 if CAPTURE_FROM_VIDEO:
-    IMAGE_SOURCE = "traffic.avi" # Video file
+    print("Using Video")
+    IMAGE_SOURCE = "sources/traffic.mp4" # Video file
 else:
+    print("Using Image")
     IMAGE_SOURCE = IMAGE_FILENAME_FORMAT # Image sequence
 
 # Time to wait between frames, 0=forever
