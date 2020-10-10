@@ -172,6 +172,7 @@ def main():
 
     log.debug("Pre-training the background subtractor...")
     default_bg = cv2.imread(IMAGE_FILENAME_FORMAT % 119)
+    print("check", default_bg)
     bg_subtractor.apply(default_bg, None, 1.0)
 
     car_counter = None # Will be created after first frame is captured
